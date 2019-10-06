@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-    <item android:id="@+id/action_buscar"
+    <item
+        android:id="@+id/action_buscar"
         android:icon="@drawable/ic_buscar_white"
-        android:title="@string/action_buscar"
+        android:title="@string/buscar"
+        app:actionViewClass="android.widget.SearchView"
         app:showAsAction="always"
-        app:actionViewClass="android.widget.SearchView"/>
+        />
     <item
         android:id="@+id/action_add"
         android:icon="@drawable/ic_adicionar_white"
@@ -17,6 +19,10 @@
         android:title="@string/atualizar"
         app:showAsAction="ifRoom"
         />
+    <item
+        android:id="@+id/action_config"
+        android:title="@string/configurações"
+        app:showAsAction="never"/>
     <item
         android:id="@+id/action_sair"
         android:title="@string/sair"

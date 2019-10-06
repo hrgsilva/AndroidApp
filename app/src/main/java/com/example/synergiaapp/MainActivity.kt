@@ -22,7 +22,7 @@ class MainActivity : AppCompatActivity() {
                     this, "Bem vindo, $Slogin!",
                     Toast.LENGTH_SHORT).show()
 
-                val intent:Intent = Intent(this, PrincipalActivity::class.java)
+                val intent:Intent = Intent(this, TelaInicialActivity::class.java)
                 startActivity(intent)
             }
             else if(Slogin == "" && Spassword == ""){
