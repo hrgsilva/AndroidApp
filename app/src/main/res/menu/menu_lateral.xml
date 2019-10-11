@@ -5,19 +5,19 @@
             android:id="@+id/nav_diciplinas"
             android:checked="true"
             android:icon="@drawable/ic_disciplina_black"
-            android:title="Disciplinas" />
+            android:title="Home" />
         <item
             android:id="@+id/nav_forum"
             android:icon="@drawable/ic_forum_black"
-            android:title="Fórum" />
+            android:title="Visualização Curriculo" />
         <item
             android:id="@+id/nav_mensagens"
             android:icon="@drawable/ic_chat_black"
-            android:title="Mensagens" />
+            android:title="Cadastrar Curriculo" />
         <item
             android:id="@+id/nav_localizacao"
             android:icon="@drawable/ic_configuracoes_black"
-            android:title="Localização" />
+            android:title="Alterar Curriculo" />
         <item
             android:id="@+id/nav_config"
             android:icon="@drawable/ic_configuracoes_black"

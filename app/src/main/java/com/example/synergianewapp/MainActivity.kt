@@ -1,12 +1,13 @@
-package com.example.synergiaapplication
+package com.example.synergianewapp
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
+import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -21,7 +22,7 @@ class MainActivity : AppCompatActivity() {
                     this, "Bem vindo, $Slogin!",
                     Toast.LENGTH_SHORT).show()
 
-                val intent: Intent = Intent(this, PrincipalActivity::class.java)
+                val intent: Intent = Intent(this, TelaInicialActivity::class.java)
                 startActivity(intent)
             }
             else if(Slogin == "" && Spassword == ""){

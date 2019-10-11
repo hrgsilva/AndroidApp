@@ -1,4 +1,4 @@
-package com.example.synergiaapplication
+package com.example.synergianewapp
 
 import org.junit.Test
 
