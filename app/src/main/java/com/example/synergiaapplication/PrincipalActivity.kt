@@ -1,24 +1,27 @@
-package com.example.synergianewapp
+package com.example.synergiaapplication
 
 import android.content.Context
-import android.support.v7.app.AppCompatActivity
+import android.content.Intent
 import android.os.Bundle
-import android.support.design.widget.NavigationView
-import android.support.v4.view.GravityCompat
-import android.support.v7.app.ActionBarDrawerToggle
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.Toast
-import kotlinx.android.synthetic.main.activity_tela_inicial.*
+import androidx.appcompat.app.ActionBarDrawerToggle
+import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.SearchView
+import androidx.drawerlayout.widget.DrawerLayout
+import androidx.core.view.GravityCompat
 import kotlinx.android.synthetic.main.toolbar.*
+import com.google.android.material.navigation.NavigationView
+import kotlinx.android.synthetic.main.activity_principal.*
 
-class TelaInicialActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener{
+class PrincipalActivity : AppCompatActivity(),NavigationView.OnNavigationItemSelectedListener{
 
     private val context: Context get() = this
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_tela_inicial)
+        setContentView(R.layout.activity_principal)
 
 //        val params = intent.extras
 //        val nome = params?.getString("nome_usuario")
@@ -26,14 +29,14 @@ class TelaInicialActivity : AppCompatActivity(), NavigationView.OnNavigationItem
 //        To
 //        ast.makeText(this,"Bem vindo $nome", Toast.LENGTH_SHORT)
 
-// meuuuuuu deusussssss obrigado!!!
+
         setSupportActionBar(toolbar)
         //actionbar
         val actionbar = supportActionBar
         //set actionbar title
-        actionbar?.title = "Inicio"
+        actionbar!!.title = "Inicio"
         //set back button
-        actionbar?.setDisplayHomeAsUpEnabled(true)
+        actionbar.setDisplayHomeAsUpEnabled(true)
 
         // configuração no menu lateral
         configuraMenuLateral()
@@ -60,7 +63,7 @@ class TelaInicialActivity : AppCompatActivity(), NavigationView.OnNavigationItem
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.menu_main, menu)
-        return true
+        return super.onCreateOptionsMenu(menu)
     }
 
     override fun onOptionsItemSelected(item: MenuItem?): Boolean {
@@ -96,11 +99,12 @@ class TelaInicialActivity : AppCompatActivity(), NavigationView.OnNavigationItem
                 Toast.makeText(this, "Clicou Config", Toast.LENGTH_SHORT).show()
             }
             R.id.nav_sair -> {
-                finish()
+                finishAffinity()
             }
         }
 // fecha menu depois de tratar o evento
         layoutMenuLateral.closeDrawer(GravityCompat.START)
         return true
     }
+
 }
